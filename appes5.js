@@ -44,6 +44,7 @@ UI.prototype.showAlert = function(message, className) {
     }, 3000);
 }
 
+//Clear text fields upon submission of input
 UI.prototype.clearFields = function() {
     document.getElementById('title').value = '';
     document.getElementById('author').value = '';
@@ -71,7 +72,8 @@ function(e){
     } else {
         //Add book to list
         ui.addBookToList(book);
-
+        //Show book added successfuly
+        ui.showAlert('Book Added!', 'success')
         //Clear fields
         ui.clearFields();
     }
